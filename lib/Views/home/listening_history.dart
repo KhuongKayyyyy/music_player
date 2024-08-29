@@ -38,13 +38,16 @@ class ListeningHistory extends StatelessWidget {
               child: ListView.builder(
                 itemCount: songList.length,
                 itemBuilder: (context, index) {
+                  // Determine whether to set isLiked to true or false based on the index
+                  bool isLiked = index % 2 == 0;
+
                   return Padding(
-                    padding:const EdgeInsets.symmetric(vertical: 3),
-                    child: TrackItem(song: songList[index]),
+                    padding: const EdgeInsets.symmetric(vertical: 3),
+                    child: TrackItem(song: songList[index], isLiked: isLiked),
                   );
                 },
               ),
-            ),
+            )
           ],
         ),
       ),
