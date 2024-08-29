@@ -4,11 +4,13 @@ import 'package:music_player/Utils/app_theme.dart';
 class HistoryPlaylist extends StatelessWidget{
   final Color primaryColor = const Color(0xff7d4cff);
   final Color secondaryColor = const Color(0xff9487f5);
-  const HistoryPlaylist({super.key});
+  final VoidCallback? onPressed;
+  const HistoryPlaylist({super.key, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: onPressed,
       child: Container(
         height: 180,
         width: 180,

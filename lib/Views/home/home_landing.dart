@@ -36,17 +36,17 @@ class HomeLanding extends StatelessWidget{
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // mixed playlist section
             Padding(
               padding: const EdgeInsets.all(10),
               child: Column(
                 children: [
-                  // mixed playlist section
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       AddedArtist(myArtistList: FakeData.artists),
                       const SizedBox(width: 10,),
-                      const HistoryPlaylist(),
+                      HistoryPlaylist(onPressed: () => Navigator.pushNamed(context, '/listeningHistory'),),
                     ],
                   ),
                   const SizedBox(height: 10,),
@@ -55,6 +55,9 @@ class HomeLanding extends StatelessWidget{
                 ],
               ),
             ),
+
+
+            //albums and songs section
             Padding(
               padding: EdgeInsets.only(left: 10),
               child: Column(
@@ -76,6 +79,7 @@ class HomeLanding extends StatelessWidget{
               child: BestAlbumSection(),
             ),
             const SizedBox(height: 10,),
+
             Padding(
               padding: const EdgeInsets.only(left: 10),
               child: SongSection(songSectionTitle: "New release for you", songList: FakeData.songs.take(10).toList(), isExpandable: false,),

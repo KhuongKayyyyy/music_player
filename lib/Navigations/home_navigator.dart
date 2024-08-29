@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/Views/home/home_landing.dart';
+import 'package:music_player/Views/home/listening_history.dart';
 
 class HomeNavigator extends StatefulWidget{
   const HomeNavigator({super.key});
@@ -18,8 +19,8 @@ class _HomeNavigator extends State<HomeNavigator>{
       onGenerateRoute: (RouteSettings settings){
         return MaterialPageRoute(
           builder: (BuildContext context){
-            if(settings.name ==""){
-              return Container(color: Colors.black,);
+            if(settings.name =="/listeningHistory"){
+              return ListeningHistory();
             }
             return HomeLanding();
           }
