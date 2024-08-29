@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:music_player/Views/home/home_landing.dart';
 
 class HomeNavigator extends StatefulWidget{
+  const HomeNavigator({super.key});
+
   @override
   _HomeNavigator createState() => _HomeNavigator();
 }
@@ -18,7 +21,7 @@ class _HomeNavigator extends State<HomeNavigator>{
             if(settings.name ==""){
               return Container(color: Colors.black,);
             }
-            return Container(color: Colors.pink,);
+            return HomeLanding();
           }
         );
       },

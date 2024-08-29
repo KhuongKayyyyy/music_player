@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 
 class AppTheme {
-  static Color primaryColor = const Color(0xFFffb3c6);
-  static Color secondaryColor = const Color(0xFF65AAEA);
+  static Color primaryColor = const Color(0xFFfc3c41);
+  static Color secondaryColor = const Color(0xFFFF6059);
   static Color success = const Color(0xFF5BA092);
   static Color inkGrey = const Color(0xFFBEBAB3);
   static Color inkGreyDark = const Color(0xFF78746D);
