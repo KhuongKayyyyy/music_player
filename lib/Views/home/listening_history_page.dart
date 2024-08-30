@@ -5,7 +5,7 @@ import 'package:music_player/Models/song.dart';
 import 'package:music_player/Utils/fake_data.dart';
 import '../../Utils/app_theme.dart';
 
-class ListeningHistory extends StatelessWidget {
+class ListeningHistoryPage extends StatelessWidget {
   final List<Song> songList = FakeData.songs.take(10).toList();
 
   @override

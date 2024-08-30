@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/Views/home/home_landing.dart';
-import 'package:music_player/Views/home/listening_history.dart';
+import 'package:music_player/Views/home/home_landing_page.dart';
+import 'package:music_player/Views/home/listening_history_page.dart';
 
 class HomeNavigator extends StatefulWidget{
   const HomeNavigator({super.key});
@@ -20,9 +20,9 @@ class _HomeNavigator extends State<HomeNavigator>{
         return MaterialPageRoute(
           builder: (BuildContext context){
             if(settings.name =="/listeningHistory"){
-              return ListeningHistory();
+              return ListeningHistoryPage();
             }
-            return HomeLanding();
+            return HomeLandingPage();
           }
         );
       },

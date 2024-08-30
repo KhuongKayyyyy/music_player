@@ -10,14 +10,21 @@ import 'package:music_player/Sections/song_section.dart';
 import 'package:music_player/Utils/app_theme.dart';
 import 'package:music_player/Utils/fake_data.dart';
 
-class HomeLanding extends StatelessWidget{
+class HomeLandingPage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Row(
           children: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.headphones, color: AppTheme.secondaryColor,)),
+            Container(
+              height: 50,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(100),
+                color: AppTheme.primaryColor,
+              ),
+              child: IconButton(onPressed: (){}, icon: const Icon(Icons.headphones, color: Colors.white)),
+            ),
             const Spacer(),
             const Text("Home", style: TextStyle(fontWeight: FontWeight.w500),),
             const Spacer(),

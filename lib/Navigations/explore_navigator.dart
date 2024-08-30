@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_player/Views/explore/explore_landing_page.dart';
 
 class ExploreNavigator extends StatefulWidget{
   const ExploreNavigator({super.key});
@@ -18,7 +19,7 @@ class _ExploreNavigatorState extends State<ExploreNavigator>{
         return MaterialPageRoute(
           settings: settings,
           builder: (BuildContext context) {
-            return Container(color: Colors.blueAccent);
+            return ExploreLandingPage();
           },
         );
       },
