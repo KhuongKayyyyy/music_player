@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/Components/Items/track_item.dart';
+import 'package:music_player/Components/Items/Song_Track/track_item.dart';
 import 'package:music_player/Components/SearchBar/custom_search_bar.dart';
 import 'package:music_player/Models/song.dart';
 import 'package:music_player/Utils/fake_data.dart';

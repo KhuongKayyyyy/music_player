@@ -2,11 +2,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:music_player/Models/album.dart';
 
-class BestAlbum extends StatelessWidget {
+class BestAlbumItem extends StatelessWidget {
   final Color backgroundColor = const Color(0xffb9fade);
   final Album album;
 
-  BestAlbum({super.key, required this.album});
+  const BestAlbumItem({super.key, required this.album});
 
   @override
   Widget build(BuildContext context) {

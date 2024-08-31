@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:music_player/Components/Buttons/main_play_button.dart';
 
-import '../../Models/song.dart';
+import '../../../Models/song.dart';
 
 class TrackWithPlayButton extends StatelessWidget {
   final Song song;

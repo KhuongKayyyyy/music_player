@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/Components/Buttons/added_artist.dart';
-import 'package:music_player/Components/Items/artist_name_item.dart';
-import 'package:music_player/Components/Buttons/history_playlist.dart';
-import 'package:music_player/Components/Buttons/mixied_playlist_small.dart';
-import 'package:music_player/Components/Items/song_item.dart';
+import 'package:music_player/Components/Buttons/Artist/added_artist.dart';
+import 'package:music_player/Components/Items/Artist/artist_name_item.dart';
+import 'package:music_player/Components/Buttons/Playlist/history_playlist.dart';
+import 'package:music_player/Components/Buttons/Playlist/mixied_playlist_small.dart';
+import 'package:music_player/Components/Items/Song_Track/song_item.dart';
 import 'package:music_player/Sections/best_album_section.dart';
 import 'package:music_player/Sections/playlist_section.dart';
 import 'package:music_player/Sections/song_section.dart';
 import 'package:music_player/Utils/app_theme.dart';
 import 'package:music_player/Utils/fake_data.dart';
+import 'package:music_player/Utils/routes.dart';
 
 class HomeLandingPage extends StatelessWidget{
   @override
@@ -53,7 +54,7 @@ class HomeLandingPage extends StatelessWidget{
                     children: [
                       AddedArtist(myArtistList: FakeData.artists),
                       const SizedBox(width: 10,),
-                      HistoryPlaylist(onPressed: () => Navigator.pushNamed(context, '/listeningHistory'),),
+                      HistoryPlaylist(onPressed: () => Navigator.pushNamed(context, Routes.listeningHistoryPage),),
                     ],
                   ),
                   const SizedBox(height: 10,),

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/Components/Buttons/search_category_buttom_big.dart';
+import 'package:music_player/Components/Buttons/search_category_button_big.dart';
 import 'package:music_player/Components/Buttons/search_category_button_small.dart';
 import 'package:music_player/Components/SearchBar/custom_search_bar.dart';
 import 'package:music_player/Sections/popular_track_list_section.dart';
 import 'package:music_player/Utils/fake_data.dart';
+import 'package:music_player/Utils/routes.dart';
 
 import '../../Utils/app_theme.dart';
 
@@ -23,7 +24,7 @@ class ExploreLandingPage extends StatelessWidget{
               child: IconButton(onPressed: (){}, icon: const Icon(Icons.headphones, color: Colors.white)),
             ),
             const Spacer(),
-            const Text("Home", style: TextStyle(fontWeight: FontWeight.w500),),
+            const Text("Explore", style: TextStyle(fontWeight: FontWeight.w500),),
             const Spacer(),
             Container(
               height: 50,
@@ -64,7 +65,7 @@ class ExploreLandingPage extends StatelessWidget{
                 children: [
                   Flexible(
                     flex: 4,
-                    child: SearchCategoryButtonBig(categoryName: "Music",),
+                    child: SearchCategoryButtonBig(categoryName: "Music",onPressed: () =>Navigator.pushNamed(context, Routes.exploreMusicPage),),
                   ),
                   const SizedBox(width: 10,),
                   Flexible(

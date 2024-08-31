@@ -1,10 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:music_player/Components/Buttons/track_bottom_sheet_button.dart';
+import 'package:music_player/Components/Buttons/Song_Track/track_bottom_sheet_button.dart';
 import 'package:music_player/Components/Dialogs/add_music_successfuly_dialog.dart';
 import 'package:music_player/Utils/app_theme.dart';
 
-import '../../Models/song.dart';
+import '../../../Models/song.dart';
 
 class TrackItem extends StatelessWidget{
   Song song;

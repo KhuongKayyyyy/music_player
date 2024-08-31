@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/Components/Buttons/mixed_playlist_big.dart';
+import 'package:music_player/Components/Buttons/Playlist/mixed_playlist_big.dart';
 import 'package:music_player/Utils/fake_data.dart';
 
 class PlaylistSection extends StatelessWidget{

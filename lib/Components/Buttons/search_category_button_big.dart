@@ -15,8 +15,9 @@ class SearchCategoryButtonBig extends StatelessWidget {
   final Color secondaryColorRed = AppTheme.secondaryColor;
 
   final String categoryName;
+  final VoidCallback? onPressed;
 
-  SearchCategoryButtonBig({required this.categoryName});
+  SearchCategoryButtonBig({required this.categoryName, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -58,54 +59,57 @@ class SearchCategoryButtonBig extends StatelessWidget {
 
     final attributes = getCategoryAttributes(categoryName);
 
-    return Container(
-      height: 120,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
-        color: attributes['primaryColor'],
-      ),
-      child: Stack(
-        children: [
-          Positioned(
-            top: 10,
-            right: 10,
-            child: Container(
-              height: 40,
-              width: 40,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(100),
-                color: attributes['secondaryColor'],
-              ),
-              child: Icon(
-                attributes['icon'],
-                color: Colors.white,
+    return InkWell(
+      onTap: onPressed,
+      child: Container(
+        height: 120,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          color: attributes['primaryColor'],
+        ),
+        child: Stack(
+          children: [
+            Positioned(
+              top: 10,
+              right: 10,
+              child: Container(
+                height: 40,
+                width: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100),
+                  color: attributes['secondaryColor'],
+                ),
+                child: Icon(
+                  attributes['icon'],
+                  color: Colors.white,
+                ),
               ),
             ),
-          ),
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            child: Container(
-              height: 40,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: attributes['secondaryColor'],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: Text(
-                  categoryName,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 17
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                height: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: attributes['secondaryColor'],
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Text(
+                    categoryName,
+                    style: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 17
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/Components/Items/artist_name_item.dart';
+import 'package:music_player/Components/Items/Artist/artist_name_item.dart';
 import 'package:music_player/Components/Buttons/main_play_button.dart';
 import 'package:music_player/Utils/fake_data.dart';
 

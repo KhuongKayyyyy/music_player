@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_player/Utils/routes.dart';
 import 'package:music_player/Views/home/home_landing_page.dart';
 import 'package:music_player/Views/home/listening_history_page.dart';
 
@@ -19,7 +20,7 @@ class _HomeNavigator extends State<HomeNavigator>{
       onGenerateRoute: (RouteSettings settings){
         return MaterialPageRoute(
           builder: (BuildContext context){
-            if(settings.name =="/listeningHistory"){
+            if(settings.name == Routes.listeningHistoryPage){
               return ListeningHistoryPage();
             }
             return HomeLandingPage();
