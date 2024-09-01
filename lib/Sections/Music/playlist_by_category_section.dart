@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:music_player/Components/Items/playlist_by_editor.dart';
 import 'package:music_player/Components/Items/playlist_by_user.dart';
 
-import '../Models/song.dart';
+import '../../Models/song.dart';
 
 class PlaylistByCategorySection extends StatelessWidget{
   final String category;

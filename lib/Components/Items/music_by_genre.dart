@@ -65,7 +65,7 @@ class MusicByGenre extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        height: 150,
+        height: 110,
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),

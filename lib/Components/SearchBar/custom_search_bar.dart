@@ -3,14 +3,15 @@ import 'package:music_player/Utils/app_theme.dart';
 
 class CustomSearchBar extends StatelessWidget {
   String textHint;
-  CustomSearchBar({required this.textHint});
+  bool isWhite;
+  CustomSearchBar({required this.textHint, required this.isWhite});
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
-        color: Colors.grey[100], // Background color of the search bar
-        borderRadius: BorderRadius.circular(30), // Rounded corners
+        color:isWhite ? Colors.white : Colors.grey[100], // Background color of the search bar
+        borderRadius: BorderRadius.circular(15), // Rounded corners
       ),
       child: Row(
         children: [

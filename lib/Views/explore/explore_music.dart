@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/Components/Items/playlist_by_user.dart';
-import 'package:music_player/Sections/music_by_genre_section.dart';
-import 'package:music_player/Sections/playlist_by_category_section.dart';
+import 'package:music_player/Sections/Music/music_by_genre_section.dart';
+import 'package:music_player/Sections/Music/playlist_by_category_section.dart';
 import 'package:music_player/Utils/fake_data.dart';
 
 import '../../Utils/app_theme.dart';
@@ -44,7 +44,7 @@ class ExploreMusic extends StatelessWidget{
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: MusicByGenreSection(),
             ),
-            const SizedBox(height: 100,),
+            const SizedBox(height: 100,)
           ],
         ),
       ),

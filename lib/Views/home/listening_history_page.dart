@@ -32,7 +32,7 @@ class ListeningHistoryPage extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 10),
-            CustomSearchBar(textHint: "What should we listen to?"),
+            CustomSearchBar(textHint: "What should we listen to?", isWhite: false,),
             const SizedBox(height: 15),
             Expanded(
               child: ListView.builder(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/Components/Items/Song_Track/track_with_play_button.dart';
 
-import '../Models/song.dart';
+import '../../Models/song.dart';
 
 class PopularTrackListSection extends StatelessWidget{
   List<Song> popularSongList;

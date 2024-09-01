@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:music_player/Components/Buttons/search_category_button_big.dart';
 import 'package:music_player/Components/Buttons/search_category_button_small.dart';
 import 'package:music_player/Components/SearchBar/custom_search_bar.dart';
-import 'package:music_player/Sections/popular_track_list_section.dart';
+import 'package:music_player/Sections/Music/popular_track_list_section.dart';
 import 'package:music_player/Utils/fake_data.dart';
 import 'package:music_player/Utils/routes.dart';
 
@@ -43,7 +43,7 @@ class ExploreLandingPage extends StatelessWidget{
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CustomSearchBar(textHint: "What should we listen to ?"),
+              CustomSearchBar(textHint: "What should we listen to ?", isWhite: false,),
               const SizedBox(height: 10,),
 
               //search by category small
@@ -70,7 +70,7 @@ class ExploreLandingPage extends StatelessWidget{
                   const SizedBox(width: 10,),
                   Flexible(
                     flex: 6,
-                    child: SearchCategoryButtonBig(categoryName: "Podcast",),
+                    child: SearchCategoryButtonBig(categoryName: "Podcast"),
                   )
                 ],
               ),
@@ -79,7 +79,7 @@ class ExploreLandingPage extends StatelessWidget{
                 children: [
                   Flexible(
                     flex: 6,
-                    child: SearchCategoryButtonBig(categoryName: "Audio Books",),
+                    child: SearchCategoryButtonBig(categoryName: "Audio Books",onPressed: () =>Navigator.pushNamed(context, Routes.exploreAudioBookPage)),
                   ),
                   const SizedBox(width: 10,),
                   Flexible(
