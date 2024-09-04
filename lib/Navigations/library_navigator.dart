@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_player/Views/MyMusic/my_music_landing.dart';
 
 class LibraryNavigator extends StatefulWidget{
   const LibraryNavigator({super.key});
@@ -18,10 +19,7 @@ class _LibraryNavigatorState extends State<LibraryNavigator>{
         return MaterialPageRoute(
           settings: settings,
           builder: (BuildContext context){
-            // if(settings.name ==""){
-            //   return Container(color: Colors.black,);
-            // }
-            return Container(color: Colors.yellow,);
+            return MyMusicLanding();
           }
         );
       }
