@@ -28,18 +28,10 @@ class ExploreMusic extends StatelessWidget{
       ),
       body: SingleChildScrollView(
         child: Column(
-            // playlist by users and editor
           children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 20, left: 10),
-              child: Column(
-                children: [
-                  PlaylistByCategorySection(category: "Discover new music", songList: FakeData.songs.take(10).toList(), isFromUser: true,),
-                  PlaylistByCategorySection(category: "Playlist from our editors", songList: FakeData.songs.take(10).toList(), isFromUser: false,),
-                ],
-              ),
-            ),
-
+            // playlist by users and editor
+            PlaylistByCategorySection(category: "Discover new music", songList: FakeData.songs.take(10).toList(), isFromUser: true,),
+            PlaylistByCategorySection(category: "Playlist from our editors", songList: FakeData.songs.take(10).toList(), isFromUser: false,),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: MusicByGenreSection(),

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/Components/Buttons/Artist/added_artist.dart';
-import 'package:music_player/Components/Items/Artist/artist_name_item.dart';
 import 'package:music_player/Components/Buttons/Playlist/history_playlist.dart';
 import 'package:music_player/Components/Buttons/Playlist/mixied_playlist_small.dart';
-import 'package:music_player/Components/Items/Song_Track/song_item.dart';
 import 'package:music_player/Sections/Music/best_album_section.dart';
 import 'package:music_player/Sections/Music/playlist_section.dart';
 import 'package:music_player/Sections/Music/song_section.dart';
@@ -66,33 +64,19 @@ class HomeLandingPage extends StatelessWidget{
 
 
             //albums and songs section
-            Padding(
-              padding: EdgeInsets.only(left: 10),
-              child: Column(
-                children: [
-                  // songs & albums section;
-                  SongSection(songSectionTitle: "Today hits", songList: FakeData.songs.take(10).toList(), isExpandable: true,),
-                  const SizedBox(height: 10,),
-                  SongSection(songSectionTitle: "Son Tung MTP's fan like", songList: FakeData.songs.take(10).toList(), isExpandable: false,),
-                  const SizedBox(height: 10,),
-                  PlaylistSection(playlistSectionTitle: "Made for you"),
-                  const SizedBox(height: 10,),
-                  const SizedBox(height: 10,),
-                ],
-              ),
-            ),
 
+            SongSection(songSectionTitle: "Today hits", songList: FakeData.songs.take(10).toList(), isExpandable: true,),
+            const SizedBox(height: 10,),
+            SongSection(songSectionTitle: "Son Tung MTP's fan like", songList: FakeData.songs.take(10).toList(), isExpandable: false,),
+            const SizedBox(height: 10,),
+            PlaylistSection(playlistSectionTitle: "Made for you"),
+            const SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: BestAlbumSection(),
             ),
             const SizedBox(height: 10,),
-
-            Padding(
-              padding: const EdgeInsets.only(left: 10),
-              child: SongSection(songSectionTitle: "New release for you", songList: FakeData.songs.take(10).toList(), isExpandable: false,),
-            ),
-
+            SongSection(songSectionTitle: "New release for you", songList: FakeData.songs.take(10).toList(), isExpandable: false,),
             //margin to bottom
             const SizedBox(height: 100,),
           ],

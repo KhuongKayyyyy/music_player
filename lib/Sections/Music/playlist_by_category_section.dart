@@ -16,7 +16,12 @@ class PlaylistByCategorySection extends StatelessWidget{
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(category, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+        Padding(
+          padding: const EdgeInsets.only(
+            left: 10,
+          ),
+          child: Text(category, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),) ,
+        ),
         const SizedBox(height: 10,),
         if(isFromUser)
           SizedBox(
@@ -27,7 +32,7 @@ class PlaylistByCategorySection extends StatelessWidget{
             itemBuilder: (context, index){
               return Padding(
                 padding: const EdgeInsets.only(
-                    right: 10,
+                    left: 10,
                     bottom: 10
                 ),
                 child: PlaylistByUser(song: songList.elementAt(index)),
@@ -44,7 +49,7 @@ class PlaylistByCategorySection extends StatelessWidget{
               itemBuilder: (context, index){
                 return Padding(
                   padding: const EdgeInsets.only(
-                      right: 10,
+                      left: 10,
                       bottom: 10
                   ),
                   child: PlaylistByEditor(song: songList.elementAt(index)),

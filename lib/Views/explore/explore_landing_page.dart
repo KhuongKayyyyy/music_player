@@ -70,7 +70,7 @@ class ExploreLandingPage extends StatelessWidget{
                   const SizedBox(width: 10,),
                   Flexible(
                     flex: 6,
-                    child: SearchCategoryButtonBig(categoryName: "Podcast"),
+                    child: SearchCategoryButtonBig(categoryName: "Radio", onPressed: () => Navigator.pushNamed(context, Routes.exploreRadioPage),),
                   )
                 ],
               ),
@@ -95,8 +95,6 @@ class ExploreLandingPage extends StatelessWidget{
                 height: 790,
                 child: PopularTrackListSection(popularSongList: FakeData.songs.take(10).toList()),
               ),
-
-
               const SizedBox(height: 100,),
             ],
           ),

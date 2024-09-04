@@ -30,7 +30,7 @@ class SearchCategoryButtonBig extends StatelessWidget {
             'primaryColor': primaryColorPurple,
             'secondaryColor': secondaryColorPurple,
           };
-        case 'podcast':
+        case 'radio':
           return {
             'icon': Icons.podcasts,
             'primaryColor': primaryColorOrange,

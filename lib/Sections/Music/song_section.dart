@@ -13,22 +13,27 @@ class SongSection extends StatelessWidget{
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          children: [
-            Text(
-              songSectionTitle,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18
+        Padding(
+          padding: const EdgeInsets.only(
+            left: 10
+          ),
+          child: Row(
+            children: [
+              Text(
+                songSectionTitle,
+                style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18
+                ),
               ),
-            ),
-            const Spacer(),
-            if(isExpandable)
-              IconButton(
-                onPressed: onPressed,
-                icon: const Icon(Icons.arrow_forward_ios_rounded),
-              )
-          ],
+              const Spacer(),
+              if(isExpandable)
+                IconButton(
+                  onPressed: onPressed,
+                  icon: const Icon(Icons.arrow_forward_ios_rounded),
+                )
+            ],
+          ),
         ),
         SizedBox(
           height: 200,
@@ -38,7 +43,7 @@ class SongSection extends StatelessWidget{
             itemBuilder: (context, index){
               Song song = songList.elementAt(index);
               return Padding(
-                padding:const EdgeInsets.only(right: 10),
+                padding:const EdgeInsets.only(left: 10),
                 child: SongItem(song: song),
               );
             },

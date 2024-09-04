@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Models/radio_station.dart';
 import '../Models/album.dart';
 import '../Models/artist.dart';
 import '../Models/book.dart';
@@ -87,19 +88,19 @@ class FakeData {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSorV9huTZhlL6gztB4lF6o0WMu_STgaujjxg&s"
   ];
 
-  List<String> popAlbumCover = [
+   List<String> popAlbumCover = [
     "https://www.billboard.com/wp-content/uploads/media/tyler-the-creator-igor-album-art-2019-billboard-embed.jpg?w=600",
     "https://www.bykerwin.com/wp-content/uploads/2022/09/Rolling-Stones-final-2022-BC.jpg",
     "https://i.cbc.ca/1.4678126.1527269930!/fileImage/httpImage/image.jpg_gen/derivatives/original_780/shawn-mendes.jpg"
   ];
 
-  List<String> rbAlbumCover = [
+   List<String> rbAlbumCover = [
     "https://www.revolt.tv/article/2024-02-18/351387/media_191666d5e27043a84a767bb6679f9d23e4f77cd98.jpeg?width=1200&format=pjpg&optimize=medium",
     "https://cdn.awsli.com.br/2197/2197610/produto/188239463/b356e4c654.jpg",
     "https://www.vibe.com/wp-content/uploads/2015/01/MCM3.jpg",
   ];
 
-  List<String> rockAlbumCover = [
+   List<String> rockAlbumCover = [
     "https://indieground.net/wp-content/uploads/2013/06/indieblog-best-album-covers-90s-11-1024x1024.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaELmha0Aaj78SsIUeNJOyCIPBdR5C1w_M9g&s",
     "https://www.billboard.com/wp-content/uploads/2022/03/35.-Metallica-%E2%80%98Master-of-Puppets-1986-album-art-billboard-1240.jpg?w=600"
@@ -438,4 +439,24 @@ class FakeData {
     ),
   ];
 
+  static List<RadioStation> radioList = [
+    RadioStation(name: "Music 1", briefInformation: "The new music that matters",
+        description: "The soundtrack to those hazy moments after a day in the sun", duration: 240, imgURL: "https://townsquare.media/site/812/files/2023/03/attachment-astroworld.jpg?w=780&q=75", title: 'Today\'s chill'),
+
+    RadioStation(name: "Music Hits", briefInformation: "Songs you know and love",
+        description: "A mix of the decade's biggest tracks and lost favorites.", duration: 360, imgURL: "https://indieground.net/wp-content/uploads/2013/06/indieblog-best-album-covers-90s-11-1024x1024.jpg", title: '\'90s Hits Essentials'),
+
+    RadioStation(name: "Music Country", briefInformation: "Where it sound like home",
+        description: "Because you can't grow if you don't have roót", duration: 480, imgURL: "https://www.vibe.com/wp-content/uploads/2015/01/MCM3.jpg", title: 'Country Roads'),
+
+
+    RadioStation(name: "Music 1", briefInformation: "The new music that matters",
+        description: "The soundtrack to those hazy moments after a day in the sun", duration: 240, imgURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP5mOk4Q_05e-ACFZPTGQi2wCH2KFSVCl3XRzfNBoT0K0tV0yjEWPn8ExT4uWj8Z438yc&usqp=CAU", title: 'Today\'s chill'),
+
+    RadioStation(name: "Music Hits", briefInformation: "Songs you know and love",
+        description: "A mix of the decade's biggest tracks and lost favorites.", duration: 360, imgURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDFQlT8_CiISslcFVQnCk2E4luBz9ptgAG5e9wWOSZ9SgSRNJXB6UauG8C2o5uwa5gxIg&usqp=CAU", title: '\'90s Hits Essentials'),
+
+    RadioStation(name: "Music Country", briefInformation: "Where it sound like home",
+        description: "Because you can't grow if you don't have roót", duration: 480, imgURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnzqcVSP04YfTLUMpgJnAId2E7K9p-Ne3eXO6pm-psWdYDHDHWfaquo--VraCkxPQnQPQ&usqp=CAU", title: 'Country Roads'),
+  ];
   }

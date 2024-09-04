@@ -10,12 +10,15 @@ class PlaylistSection extends StatelessWidget{
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          playlistSectionTitle,
-          style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 18
+        Padding(
+          padding: EdgeInsets.only(left: 10),
+          child: Text(
+            playlistSectionTitle,
+            style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18
             ),
+          ),
         ),
         const SizedBox(
           height: 10,
@@ -28,7 +31,7 @@ class PlaylistSection extends StatelessWidget{
             itemBuilder: (context, index){
               List<String> title = ["GET UP!","CHILL","NEW MUSIC"];
               return Padding(
-                padding:const EdgeInsets.only(right: 10),
+                padding:const EdgeInsets.only(left: 10),
                 child: MixedPlaylistBig(artistList: FakeData.artists.take(5).toList(), mixedPlaylistTitle: title.elementAt(index),),
               );
             },
