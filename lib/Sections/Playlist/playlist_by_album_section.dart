@@ -1,22 +1,25 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
-import 'package:music_player/Components/Items/Playlist/playlist_of_artist_item.dart';
+import 'package:music_player/Components/Items/Playlist/playlist_by_album_item.dart';
 import 'package:music_player/Utils/fake_data.dart';
 
-import 'add_playlist_item.dart';
+import '../../Components/Items/Playlist/add_playlist_item.dart';
+import '../../Models/album.dart';
 
-class PlaylistByArtistSection extends StatelessWidget{
+class PlaylistByAlbumSection extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       children: [
         Row(
           children: [
             Expanded(
-              child: AddPlaylistItem(playListName: "Add Playlist"),
+              child: AddPlaylistItem(playListName: "Add Album"),
             ),
             const SizedBox(width: 10,),
             Expanded(
-              child: PlaylistOfArtistItem(artist: FakeData.artists.elementAt(0)),
+              child: PlaylistByAlbumItem(album: FakeData.albums.first),
             )
           ],
         ),
@@ -24,11 +27,11 @@ class PlaylistByArtistSection extends StatelessWidget{
         Row(
           children: [
             Expanded(
-              child: PlaylistOfArtistItem(artist: FakeData.artists.elementAt(1)),
+              child: PlaylistByAlbumItem(album: FakeData.albums.elementAt(1)),
             ),
             const SizedBox(width: 10,),
             Expanded(
-              child: PlaylistOfArtistItem(artist: FakeData.artists.elementAt(2)),
+              child: PlaylistByAlbumItem(album: FakeData.albums.elementAt(2)),
             )
           ],
         ),
@@ -36,14 +39,15 @@ class PlaylistByArtistSection extends StatelessWidget{
         Row(
           children: [
             Expanded(
-              child: PlaylistOfArtistItem(artist: FakeData.artists.elementAt(3)),
+              child: PlaylistByAlbumItem(album: FakeData.albums.elementAt(3)),
             ),
             const SizedBox(width: 10,),
             Expanded(
-              child: PlaylistOfArtistItem(artist: FakeData.artists.elementAt(4)),
+              child: PlaylistByAlbumItem(album: FakeData.albums.elementAt(4)),
             )
           ],
         ),
+        const SizedBox(height: 10,),
       ],
     );
   }

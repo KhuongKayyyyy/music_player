@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/Components/Buttons/search_category_button_small.dart';
-import 'package:music_player/Components/Items/Playlist/playlist_by_artist_section.dart';
+import 'package:music_player/Sections/Playlist/playlist_by_album_section.dart';
+import 'package:music_player/Sections/Playlist/playlist_by_artist_section.dart';
 import 'package:music_player/Models/song.dart';
 import 'package:music_player/Sections/Playlist/my_playlist_section.dart';
 import '../../Components/Items/Song_Track/track_item.dart';
@@ -35,7 +36,7 @@ class _MyMusicLandingState extends State<MyMusicLanding> {
           },
         );
       case 2:
-        return MyPlaylistSection();
+        return PlaylistByAlbumSection();
       case 3:
         return PlaylistByArtistSection();
       default:

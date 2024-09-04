@@ -151,28 +151,28 @@ class FakeData {
         title: "Lemonade",
         artistName: "Beyoncé",
         releaseDate: "2016-04-23",
-        imgURL: "https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png",
+        imgURL: "https://aimm.edu/hubfs/Blog%20Images/Top%2010%20Album%20Covers%20of%202017/Tyler%20the%20Creator-%20Flower%20boy.jpg",
         songs: []  // Add songs specific to this album
     ),
     Album(
         title: "Scorpion",
         artistName: "Drake",
         releaseDate: "2018-06-29",
-        imgURL: "https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png",
+        imgURL: "https://images.theconversation.com/files/512871/original/file-20230301-26-ryosag.jpg?ixlib=rb-4.1.0&rect=97%2C79%2C5799%2C5817&q=45&auto=format&w=926&fit=clip",
         songs: []  // Add songs specific to this album
     ),
     Album(
         title: "Divide",
         artistName: "Ed Sheeran",
         releaseDate: "2017-03-03",
-        imgURL: "https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Ed_Sheeran_-_Divide.png/220px-Ed_Sheeran_-_Divide.png",
+        imgURL: "https://www.billboard.com/wp-content/uploads/2023/07/SZA-SOS-album-art-billboard-1240.jpg?w=800",
         songs: []  // Add songs specific to this album
     ),
     Album(
         title: "1989",
         artistName: "Taylor Swift",
         releaseDate: "2014-10-27",
-        imgURL: "https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/Taylor_Swift_-_1989.png/220px-Taylor_Swift_-_1989.png",
+        imgURL: "https://images.prismic.io/milanote/df7eeb83a07162b45ac2e882cac055de9411054a_cover.jpg?auto=compress,format",
         songs: []  // Add songs specific to this album
     ),
     Album(
