@@ -6,5 +6,6 @@ class Routes{
   // static const String accountLandingPage = '/accountLandingPage';
   static const String accountEditInformation = '/accountEditInformation';
   static const String accountManageStorage = '/accountManageStorage';
+  static const String accountManagePayment = '/accountManagePayment';
 
 }

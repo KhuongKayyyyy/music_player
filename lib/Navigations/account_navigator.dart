@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:music_player/Views/Account/account_edit_information.dart';
 import 'package:music_player/Views/Account/account_landing.dart';
 import 'package:music_player/Views/Account/account_manage_storage.dart';
+import 'package:music_player/Views/Account/account_payment.dart';
 import 'package:music_player/main_wrapper.dart';
 
 import '../Utils/routes.dart';
@@ -35,6 +36,8 @@ class _AccountNavigatorState extends State<AccountNavigator> {
               return AccountManageStorage();
             } else if (settings.name == Routes.accountEditInformation) {
               return AccountEditInformation();
+            }else if (settings.name == Routes.accountManagePayment){
+              return AccountPayment();
             }
             return const AccountLanding();
           },

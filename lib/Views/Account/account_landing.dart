@@ -105,7 +105,9 @@ class _AccountLandingState extends State<AccountLanding> {
             AccountSettingItem(
               iconData: Icons.payment,
               settingName: "Payment",
-              onPressed: (){},
+              onPressed: (){
+                Navigator.pushNamed(context, Routes.accountManagePayment);
+              },
             ),
             const SizedBox(height: 10),
             AccountSettingItem(

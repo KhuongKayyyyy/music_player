@@ -82,6 +82,7 @@ class FakeData {
     Genres(name: "R&B", imgURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/R%26B_Singer_2015.jpg/1024px-R%26B_Singer_2015.jpg"),
   ];
 
+  List<String> paymentMethodImage = ["https://e7.pngegg.com/pngimages/530/165/png-clipart-logo-mastercard-pentagram-flat-design-brand-mastercard-text-trademark.png","https://e7.pngegg.com/pngimages/618/512/png-clipart-visa-logo-mastercard-credit-card-payment-visa-blue-company.png","https://cdn.prod.website-files.com/62b0e6308cc691625470b227/62dec0259f18b71442a15966_Apple-Logo.png"];
   List<String> hiphopAlbumCover = [
     "https://images.prismic.io/rockthebells/524e2d10-3015-4098-b2a9-83de5cf70ee4_67ce3bba.jpg.webp?auto=compress,format",
     "https://townsquare.media/site/812/files/2023/03/attachment-astroworld.jpg?w=780&q=75",
