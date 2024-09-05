@@ -11,14 +11,14 @@ class ExploreNavigator extends StatefulWidget{
   @override
   _ExploreNavigatorState createState() => _ExploreNavigatorState();
 }
-GlobalKey<NavigatorState> exploreNavigatorKey = GlobalKey<NavigatorState>();
+GlobalKey<NavigatorState> _exploreNavigatorKey = GlobalKey<NavigatorState>();
 
 
 class _ExploreNavigatorState extends State<ExploreNavigator>{
   @override
   Widget build(BuildContext context) {
     return Navigator(
-      key: exploreNavigatorKey,
+      key: _exploreNavigatorKey,
       onGenerateRoute: (RouteSettings settings) {
         return MaterialPageRoute(
           settings: settings,

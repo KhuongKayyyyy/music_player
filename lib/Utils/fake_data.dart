@@ -12,7 +12,7 @@ class FakeData {
     name: "Nguyen Dat Khuong",
     password: "1123",
     email: "zzkhngzz@gmail.com",
-    avatarURL: "https://i.pinimg.com/originals/49/3f/a0/493fa0f13970ab3ef29375669f670451.jpg",
+    avatarURL: "https://yt3.googleusercontent.com/oN0p3-PD3HUzn2KbMm4fVhvRrKtJhodGlwocI184BBSpybcQIphSeh3Z0i7WBgTq7e12yKxb=s900-c-k-c0x00ffffff-no-rj",
   );
 
   static List<Artist> artists = [

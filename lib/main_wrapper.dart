@@ -14,12 +14,20 @@ class MainWrapper extends StatefulWidget {
 
 class _MainWrapperState extends State<MainWrapper> {
   int _selectedIndex = 0;
+  bool isBottomNavVisible = true;
+
+  // Callback to control the visibility of the bottom navigation bar
+  void _handleBottomNavVisibility(bool isVisible) {
+    setState(() {
+      isBottomNavVisible = isVisible;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      bottomNavigationBar: Container(
+      bottomNavigationBar: isBottomNavVisible ? Container(
         height: 100,
         decoration: BoxDecoration(
           boxShadow: [
@@ -37,9 +45,9 @@ class _MainWrapperState extends State<MainWrapper> {
           ),
           child: NavigationBarTheme(
             data: NavigationBarThemeData(
-              indicatorColor: Colors.transparent, // Remove selected item background
+              indicatorColor: Colors.transparent,
               labelTextStyle: MaterialStateProperty.all(
-                const TextStyle(color: Colors.transparent), // Optional: Remove label color
+                const TextStyle(color: Colors.transparent),
               ),
             ),
             child: NavigationBar(
@@ -52,9 +60,7 @@ class _MainWrapperState extends State<MainWrapper> {
               destinations: [
                 NavigationDestination(
                   icon: Icon(
-                    _selectedIndex == 0
-                        ? Icons.home // Filled icon when selected
-                        : Icons.home_outlined, // Outlined icon when not selected
+                    _selectedIndex == 0 ? Icons.home : Icons.home_outlined,
                     color: _selectedIndex == 0 ? AppTheme.primaryColor : Colors.black,
                     size: 35,
                   ),
@@ -62,9 +68,7 @@ class _MainWrapperState extends State<MainWrapper> {
                 ),
                 NavigationDestination(
                   icon: Icon(
-                    _selectedIndex == 1
-                        ? Icons.search
-                        : Icons.search_outlined,
+                    _selectedIndex == 1 ? Icons.search : Icons.search_outlined,
                     color: _selectedIndex == 1 ? AppTheme.primaryColor : Colors.black,
                     size: 35,
                   ),
@@ -72,9 +76,7 @@ class _MainWrapperState extends State<MainWrapper> {
                 ),
                 NavigationDestination(
                   icon: Icon(
-                    _selectedIndex == 2
-                        ? Icons.music_note
-                        : Icons.music_note_outlined,
+                    _selectedIndex == 2 ? Icons.music_note : Icons.music_note_outlined,
                     color: _selectedIndex == 2 ? AppTheme.primaryColor : Colors.black,
                     size: 35,
                   ),
@@ -82,9 +84,7 @@ class _MainWrapperState extends State<MainWrapper> {
                 ),
                 NavigationDestination(
                   icon: Icon(
-                    _selectedIndex == 3
-                        ? Icons.person
-                        : Icons.person_outline,
+                    _selectedIndex == 3 ? Icons.person : Icons.person_outline,
                     color: _selectedIndex == 3 ? AppTheme.primaryColor : Colors.black,
                     size: 35,
                   ),
@@ -92,18 +92,21 @@ class _MainWrapperState extends State<MainWrapper> {
                 ),
               ],
             ),
-          )
+          ),
         ),
-      ),
+      ) : null,
       body: IndexedStack(
         index: _selectedIndex,
-        children:const [
-          HomeNavigator(),
-          ExploreNavigator(),
-          LibraryNavigator(),
-          AccountNavigator(),
+        children: [
+          const HomeNavigator(),
+          const ExploreNavigator(),
+          const LibraryNavigator(),
+          AccountNavigator(
+            onBottomNavVisibilityChanged: _handleBottomNavVisibility,
+          ),
         ],
       ),
     );
   }
 }
+
